@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE func-lib PUBLIC "-//Railo//DTD CFML Function Library 1.0//EN"
+	"dtd/web-cfmfunctionlibrary_1_0.dtd">
+<!-- http://www.getrailo.com/j2ee/dtd/web-jspfunctionlibrary_1_0.dtd -->
+<func-lib>
+	<flib-version>1.00</flib-version>
+	<short-name>orientdb</short-name>
+	<uri>http://www.railo.ch/functions/1_0_0</uri>
+	<display-name>OrientDB functions</display-name>
+	<description></description>
+	
+
+	<function>
+		<name>OrientDBConnect</name>
+		<class>net.ringgi.railo.extension.orientdb.OrientDBConnect</class>
+		<description>Connects to an OrientDB via the OrientGraphFactory pool (OrientDB 1.7). Returns either a transaction save OrientDatabaseDocument or OrientGraph. You can control the returned type by setting the dbType to either document or graph.</description>
+		<argument>
+			<name>dbName</name>
+			<alias>db,name</alias>
+			<type>String</type>
+			<required>yes</required>
+			<description>Name of the database to connect.</description>
+		</argument>
+		<argument>
+			<name>host</name>
+			<alias>server</alias>
+			<type>String</type>
+			<required>no</required>
+			<description>Host name of the OrientDB in the style of host:2424</description>
+			<default>localhost:2424</default>
+		</argument>
+		<argument>
+            <name>dbType</name>
+            <alias>type</alias>
+            <type>String</type>
+            <required>no</required>
+            <description>The database type used, can be document or graph. You can use either the OrientDB Document API or the independent TinkerPop Blueprints API.</description>
+            <default>document</default>
+        </argument>
+        <argument>
+            <name>username</name>
+            <alias>dbUsername</alias>
+            <type>String</type>
+            <required>no</required>
+            <description>Username of the OrientDB.</description>
+            <default>admin</default>
+        </argument>
+        <argument>
+            <name>password</name>
+            <alias>dbPassword</alias>
+            <type>String</type>
+            <required>no</required>
+            <description>Password of the OrientDB.</description>
+            <default>admin</default>
+        </argument>
+        <argument>
+            <name>useConnectionPool</name>
+            <type>boolean</type>
+            <required>no</required>
+            <description>If the OrientDB connection pool is used. From OrientDB 1.7 on the pool is implemented via the OrientGraphFactory.</description>
+            <default>true</default>
+        </argument>
+        <argument>
+            <name>poolMin</name>
+            <type>numeric</type>
+            <required>no</required>
+            <description>The minium size of the connection pool.</description>
+            <default>1</default>
+        </argument>
+        <argument>
+            <name>poolMax</name>
+            <type>numeric</type>
+            <required>no</required>
+            <description>The maximum size of the connection pool.</description>
+            <default>10</default>
+        </argument>
+        <argument>
+            <name>storageMode</name>
+            <alias>mode</alias>
+            <type>String</type>
+            <required>no</required>
+            <description>The storageMode of the OrientDB, can be remote, plocal or memory.</description>
+            <default>remote</default>
+        </argument>
+        <argument>
+            <name>localPath</name>
+            <type>String</type>
+            <required>no</required>
+            <description>Only needed if storageMode is plocal "/path/to/my/database/".</description>
+        </argument>
+
+		<return>
+			<type>object</type>
+		</return>
+	</function>
+
+	
+</func-lib>
