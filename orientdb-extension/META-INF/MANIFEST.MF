@@ -1,0 +1,4 @@
+version: "0.1.0-SNAPSHOT"
+id: "0B8B23BB-4396-4834-B8F382F2047CA283"
+name: "OrientDB Extension"
+railo-core-version: "4.0.0.000"
