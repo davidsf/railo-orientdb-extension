@@ -1,0 +1,33 @@
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+## secure files to ignore
+*.pem
+*.pub
+
+## project files (Eclipse/IntelliJ) to ignore
+*.iml
+.idea
+.project
+.settings
+.classpath
+.metadata
+
+## gradle
+.gradle
+
+## vagrant
+.vagrant
+
+## Web Development
+*bower_components
+*node_modules
+
+## directories
+build/
+orientdb-extension-builder/
+
