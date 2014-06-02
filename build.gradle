@@ -3,8 +3,7 @@ apply plugin: 'java'
 version = '0.1.0-SNAPSHOT'
 
 ext {
-    deployDir = "/Users/ringgi/Projects/EPIC/runtime/railo/config/server/railo-server/context/deploy/"
-    //deployDir = "./dist"
+    deployDir = "./dist"
 }
 
 
